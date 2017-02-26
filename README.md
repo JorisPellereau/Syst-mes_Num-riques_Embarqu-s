@@ -1,2 +1,2 @@
-# Syst-mes_Num-riques_Embarqu-s
+# Systemes_Numeriques_Embarques
 Travaux pratiques SNE
