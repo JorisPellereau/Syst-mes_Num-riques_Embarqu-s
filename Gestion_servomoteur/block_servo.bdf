@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 232 168 408 184)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "PLD_CLKINPUT" (rect 5 0 87 12)(font "Arial" ))
+	(text "PLD_CLKINPUT" (rect 5 0 86 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -34,6 +34,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 120 168 176 184))
 )
 (pin
 	(input)
@@ -50,6 +51,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 152 264 216 280))
 )
 (pin
 	(output)
@@ -66,12 +68,13 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 968 232 1024 248))
 )
 (pin
 	(output)
-	(rect 792 280 968 296)
+	(rect 784 312 960 328)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "OUT_MOT" (rect 90 0 140 12)(font "Arial" ))
+	(text "OUT_MOT2" (rect 90 0 146 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -83,10 +86,42 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 792 280 968 296)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "OUT_MOT1" (rect 90 0 146 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 968 296 1032 312))
+)
 (symbol
-	(rect 416 144 768 320)
+	(rect 208 152 240 168)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 5 26 17)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 416 144 768 352)
 	(text "NIOS_servo" (rect 4 0 84 16)(font "Arial" (font_size 10)))
-	(text "inst" (rect 4 160 21 172)(font "Arial" ))
+	(text "inst" (rect 4 192 21 204)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -122,26 +157,19 @@ applicable agreement for further details.
 		(text "out_pwm_from_the_pwm_32_1 " (rect 173 137 358 151)(font "Arial" (font_size 8)))
 		(line (pt 336 144)(pt 352 144))
 	)
+	(port
+		(pt 352 176)
+		(output)
+		(text "out_pwm_from_the_pwm_32_2 " (rect 0 0 185 14)(font "Arial" (font_size 8)))
+		(text "out_pwm_from_the_pwm_32_2 " (rect 173 169 358 183)(font "Arial" (font_size 8)))
+		(line (pt 336 176)(pt 352 176))
+	)
 	(drawing
 		(line (pt 16 64)(pt 335 64)(color 0 0 0)(dotted))
 		(line (pt 16 96)(pt 335 96)(color 0 0 0)(dotted))
 		(line (pt 16 128)(pt 335 128)(color 0 0 0)(dotted))
-		(rectangle (rect 16 16 336 160))
-	)
-)
-(symbol
-	(rect 208 152 240 168)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst1" (rect 3 5 26 17)(font "Arial" )(invisible))
-	(port
-		(pt 16 16)
-		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
-	)
-	(drawing
-		(line (pt 8 8)(pt 24 8))
+		(line (pt 16 160)(pt 335 160)(color 0 0 0)(dotted))
+		(rectangle (rect 16 16 336 192))
 	)
 )
 (connector
@@ -169,4 +197,8 @@ applicable agreement for further details.
 	(pt 768 224)
 	(pt 792 224)
 	(bus)
+)
+(connector
+	(pt 768 320)
+	(pt 784 320)
 )
